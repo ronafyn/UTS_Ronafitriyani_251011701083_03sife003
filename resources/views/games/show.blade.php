@@ -6,8 +6,7 @@
     <div class="row g-0">
         <div class="col-md-5">
             <img src="{{ asset('assets/images/' . $game->image) }}"
-                 class="img-fluid w-100 h-100" alt="{{ $game->title }}"
-                 style="object-fit:cover;max-height:480px;">
+     class="detail-img" alt="{{ $game->title }}">
         </div>
         <div class="col-md-7">
             <div class="card-body p-4">
