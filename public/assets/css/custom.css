@@ -1,0 +1,370 @@
+:root {
+    --pink: #f48fb1;          /* pink utama (pastel) */
+    --pink-dark: #ec6f9b;     /* hover tombol */
+    --pink-text: #a63a63;     /* teks judul & aksen (rose tua, biar terbaca) */
+    --pink-light: #f8bbd0;
+    --pink-soft: #fff5f8;     /* background halaman */
+    --pink-border: #fbd3e1;
+}
+
+body {
+   background-color: #fff5f8;
+}
+
+navbar-pink {
+    background: rgba(251, 207, 224, .75);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(244, 143, 177, .25);
+}
+.navbar-pink .navbar-brand,
+.navbar-pink .nav-link {
+    color: var(--pink-text);
+}
+.navbar-pink .nav-link:hover {
+    color: #7d2449;
+    text-decoration: underline;
+}
+.navbar-pink .navbar-toggler {
+    border-color: var(--pink-text);
+}
+.navbar-pink .navbar-toggler-icon {
+    filter: invert(30%) sepia(40%) saturate(900%) hue-rotate(290deg);
+}
+
+.hero-pink {
+    background: transparent;
+    color: var(--pink-text);
+}
+
+/* Tombol */
+.btn-primary {
+    --bs-btn-bg: var(--pink);
+    --bs-btn-border-color: var(--pink);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-bg: var(--pink-dark);
+    --bs-btn-hover-border-color: var(--pink-dark);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-bg: #e0578b;
+    --bs-btn-active-border-color: #e0578b;
+}
+.btn-outline-pink {
+    color: var(--pink-text);
+    border-color: var(--pink);
+}
+.btn-outline-pink:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #fff;
+}
+
+/* Badge */
+.badge-pink {
+    background-color: var(--pink-light);
+    color: var(--pink-text);
+}
+.badge-soft {
+    background-color: #fde2ec;
+    color: var(--pink-text);
+}
+
+/* Card */
+.card {
+    border: 1px solid var(--pink-border);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.card-game {
+    transition: transform .2s, box-shadow .2s;
+}
+.card-game:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .6rem 1.2rem rgba(244, 143, 177, .3) !important;
+}
+.card-title, .detail-title {
+    color: var(--pink-text);
+}
+.card-footer {
+    background: #fff;
+}
+
+/* Tabel detail */
+.table-pink th {
+    color: var(--pink-text);
+    width: 140px;
+}
+.table-pink td, .table-pink th {
+    border-bottom: 1px solid var(--pink-border);
+}
+
+/* Footer */
+footer {
+    background: #fde8f0;
+    color: var(--pink-text);
+}
+/* Font */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar-brand,
+.hero-pink h1,
+.card-title,
+.detail-title {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: .5px;
+}
+/* Pagination */
+.pagination {
+    --bs-pagination-color: var(--pink-text);
+    --bs-pagination-border-color: var(--pink-border);
+    --bs-pagination-hover-color: var(--pink-text);
+    --bs-pagination-hover-bg: #fde2ec;
+    --bs-pagination-hover-border-color: var(--pink-border);
+    --bs-pagination-focus-color: var(--pink-text);
+    --bs-pagination-focus-bg: #fde2ec;
+    --bs-pagination-focus-box-shadow: 0 0 0 .2rem rgba(244, 143, 177, .25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: var(--pink);
+    --bs-pagination-active-border-color: var(--pink);
+}
+/* Banner layar penuh */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.hero-title {
+    font-size: clamp(3.5rem, 12vw, 8rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.btn-explore {
+    color: var(--pink-text);
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(244, 143, 177, .4);
+}
+.btn-explore:hover {
+    background: var(--pink);
+    color: #fff;
+}
+
+
+.section-heading {
+    display: inline-block;
+    background: rgba(255, 255, 255, .85);
+    padding: .4rem 1.5rem;
+    border-radius: 2rem;
+}
+/* Latar gambar blur */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: url('../images/bg-game.jpeg') center / cover no-repeat;
+    filter: blur(4px);
+    transform: scale(1.08); /* menutup tepi yang pucat akibat blur */
+}
+
+/* Lapisan pink lembut di atas gambar */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: rgba(255, 245, 248, .35);
+}
+/* Menu aktif */
+.navbar-pink .nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid var(--pink-text);
+}
+
+/* Pencarian */
+.search-box {
+    max-width: 480px;
+}
+.search-box .form-control {
+    border-color: var(--pink-border);
+    border-radius: 2rem 0 0 2rem;
+    padding-left: 1.2rem;
+}
+.search-box .form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 .2rem rgba(244, 143, 177, .25);
+}
+.search-box .btn {
+    border-radius: 0 2rem 2rem 0;
+}
+
+/* Filter genre */
+.genre-pill {
+    background: #fff;
+    color: var(--pink-text);
+    border: 1px solid var(--pink-border);
+    border-radius: 2rem;
+    padding: .3rem 1rem;
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .2s;
+}
+.genre-pill:hover {
+    background: #fde2ec;
+    color: var(--pink-text);
+}
+.genre-pill.active {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #fff;
+}
+
+/* Hasil kosong */
+.empty-state {
+    background: rgba(255, 255, 255, .85);
+    border-radius: 1rem;
+    color: var(--pink-text);
+}
+
+/* Tombol kembali ke atas */
+.btn-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--pink);
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 46px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(244, 143, 177, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    z-index: 1000;
+}
+.btn-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+.btn-top:hover {
+    background: var(--pink-dark);
+    color: #fff;
+}
+.card-img-wrap {
+    overflow: hidden;
+}
+.card-img-wrap img {
+    transition: transform .4s;
+}
+.card-game:hover .card-img-wrap img {
+    transform: scale(1.08);
+}
+.hero-pink .fs-1 {
+    display: inline-block;
+    animation: melayang 3s ease-in-out infinite;
+}
+@keyframes melayang {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+.card-game {
+    animation: muncul .6s ease both;
+}
+@keyframes muncul {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.hero-title {
+    text-shadow: 0 0 20px rgba(255, 255, 255, .9), 3px 3px 0 rgba(255, 255, 255, .7);
+}
+.hero-icon {
+    color: #e58ab0;
+    display: inline-block;
+    animation: melayang 3s ease-in-out infinite;
+}
+/* Logo navbar */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    font-family: 'Fredoka', sans-serif;
+}
+.brand-logo svg {
+    width: 38px;
+    height: auto;
+    color: #e0578b;
+    transition: transform .3s;
+}
+.brand-logo:hover svg {
+    transform: rotate(-12deg) scale(1.1);
+}
+.brand-text {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #8a2e55;
+    letter-spacing: .5px;
+}
+.brand-verse {
+    color: #e0578b;
+}
+.brand-tag {
+    background: #fff;
+    color: #e0578b;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: .15rem .55rem;
+    border-radius: 2rem;
+    border: 1px solid #f8bbd0;
+}
+/* Banner layar penuh, daftar game turun di bawahnya */
+.hero-full {
+    min-height: calc(100vh - 76px);   /* 76px = perkiraan tinggi navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;             /* tambahan agar banner terasa lebih tinggi */
+}
+
+#daftar-game {
+    padding-top: 4rem;                /* jarak antara banner dan daftar */
+    scroll-margin-top: 76px;          /* supaya tidak tertutup navbar saat klik "Jelajahi Game" */
+}
+/* Slogan */
+.hero-tagline {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-weight: 500;
+    color: #7d2449;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, .95),
+        0 0 16px rgba(255, 255, 255, .8);
+    margin-bottom: .6rem;
+}
+
+/* Baris identitas */
+.hero-identity {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6b1f3f;
+    background: rgba(255, 255, 255, .75);
+    padding: .4rem 1.1rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 10px rgba(244, 143, 177, .25);
+}
